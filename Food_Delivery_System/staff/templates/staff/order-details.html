@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Order Details</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1>Order id: {{ order.pk }}</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <h3>Customer Information</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <p><span style="font-weight: 400;">First Name:</span> {{ order.first_name }}</p>
+            <p><span style="font-weight: 400;">Second Name:</span> {{ order.second_name }}</p>
+            <p><span style="font-weight: 400;">Email:</span> {{ order.email }}</p>
+            <p><span style="font-weight: 400;">County:</span> {{ order.county }}</p>
+            <p><span style="font-weight: 400;">Sub County:</span> {{ order.sub_county }}</p>
+            <p><span style="font-weight: 400;">Area:</span> {{ order.area }}</p>
+            <p><span style="font-weight: 400;">Is paid:</span>
+                {% if order.is_paid %}
+                ✔
+                {% else %}
+                ❌
+                {% endif %}
+            </p>
+            <p><span style="font-weight: 400;">Delivered: {% if order.is_delivered %}✔</span>
+                {% else %}
+                <form method="post">
+                {% csrf_token %}
+                <button type="submit">Mark as Delivered</button>
+                </form>
+                {% endif %}
+            </p>
+
+        </div>
+    </div>
+
+</div>
+</body>
+</html>

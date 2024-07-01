@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Now!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 10;
+            padding: 10;
+            background-color: #f0f0f0;
+        }
+        button{
+            background-color: #f00;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .button:hover {
+          background-color: #fff;
+          color: #f00;
+          border: 1px solid #f00;
+        }
+        .form-container {
+            width: 300px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 13px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        input{
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <form method="post">
+            {% csrf_token %}
+            <header>
+                {% for message in messages %}
+                <h5>{{message}}</h5>
+                {% endfor %}
+            </header>
+            <div>
+                {% for car in carbs%}
+                    <div>
+                        <img src="{{car.image.url}}" width="200" height="200"/>
+                    </div>
+                    <div>
+                        <div>
+                            <input type="checkbox" name="items[]" value="{{car.pk}}">: Check here to select the dish
+                            <label>Dish name: {{ car.name }}</label>
+                        </div>
+                        <p>Cost: {{ car.price }}</p>
+                    </div>
+                <div>
+                    <label>Description</label>
+                    <h5>{{ car.description }}</h5>
+                </div>
+                {% endfor %}
+                {% for car in snacks%}
+                    <div>
+                        <img src="{{car.image.url}}" width="200" height="200"/>
+                    </div>
+                    <div>
+                        <div>
+                            <input type="checkbox" name="items[]" value="{{car.pk}}">: Check here to select the dish
+                            <label>Dish name: {{ car.name }}</label>
+                        </div>
+                        <p>Cost: {{ car.price }}</p>
+                    </div>
+                <div>
+                    <label>Description</label>
+                    <h5>{{ car.description }}</h5>
+                </div>
+                {% endfor %}
+                {% for car in prots%}
+                    <div>
+                        <img src="{{car.image.url}}" width="200" height="200"/>
+                    </div>
+                    <div>
+                        <div>
+                            <input type="checkbox" name="items[]" value="{{car.pk}}">: Check here to select the dish
+                            <label>Dish name: {{ car.name }}</label>
+                        </div>
+                        <p>Cost: {{ car.price }}</p>
+                    </div>
+                <div>
+                    <label>Description</label>
+                    <h5>{{ car.description }}</h5>
+                </div>
+                {% endfor %}
+                {% for car in soft%}
+                    <div>
+                        <img src="{{car.image.url}}" width="200" height="200"/>
+                    </div>
+                    <div>
+                        <div>
+                            <input type="checkbox" name="items[]" value="{{car.pk}}">: Check here to select the dish
+                            <label>Dish name: {{ car.name }}</label>
+                        </div>
+                        <p>Cost: {{ car.price }}</p>
+                    </div>
+                <div>
+                    <label>Description</label>
+                    <h5>{{ car.description }}</h5>
+                </div>
+                {% endfor %}
+                {% for car in beverage%}
+                    <div>
+                        <img src="{{car.image.url}}" width="200" height="200"/>
+                    </div>
+                    <div>
+                        <div>
+                            <input type="checkbox" name="items[]" value="{{car.pk}}">: Check here to select the dish
+                            <label>Dish name: {{ car.name }}</label>
+                        </div>
+                        <p>Cost: {{ car.price }}</p>
+                    </div>
+                <div>
+                    <label>Description</label>
+                    <h5>{{ car.description }}</h5>
+                </div>
+                {% endfor %}
+                {% for car in vitamins %}
+                    <div>
+                        <img src="{{car.image.url}}" width="200" height="200"/>
+                    </div>
+                    <div>
+                        <div>
+                            <input type="checkbox" name="items[]" value="{{car.pk}}">
+                            <label>Dish name: {{ car.name }}</label>: Check here to select the dish
+                        </div>
+                        <p>Cost: {{ car.price }}</p>
+                    </div>
+                <div>
+                    <label>Description</label>
+                    <h5>{{ car.description }}</h5>
+                </div>
+                {% endfor %}
+            </div>
+            <br>
+            <div>
+                <h4>Enter your details here: </h4>
+                <div>
+                    <label>First name</label>
+                    <input type="text" name="first_name" placeholder="First Name" required>
+                    <br>
+                    <label>Second name</label>
+                    <input type="text" name="second_name" placeholder="Second Name" required>
+                    <br>
+                    <label>Email</label>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <br>
+                    <label>County</label>
+                    <input type="text" name="county" placeholder="County of residence">
+                    <label>Sub-County</label>
+                    <input type="text" name="sub-county" placeholder="Sub county">
+                    <label>Area/ Estate</label>
+                    <input type="text" name="area" placeholder="Area of residence">
+                </div>
+            </div>
+            <span>
+                <button class="button">Place Order</button>
+            </span>
+        </form>
+    </div>
+</body>
+</html>

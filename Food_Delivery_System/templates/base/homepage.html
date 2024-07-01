@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+{% include "base/index.html" %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+</head>
+<body>
+{% block content %}
+    <header>
+        <div class="logo">
+          <a href="/"><div>🏠</div></a>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="{% url 'menu' %}">Menu</a></li>
+          </ul>
+          <ul>
+            <li><a href="/about">About us</a></li>
+          </ul>
+        </nav>
+    </header>
+    <div class="container mb-5">
+        <div class="row justify-content-center mt-5">
+            <div class="col-md-8 col-sm-12 offset-md-1 p-4 text-center">
+                <h2>Chakulakitamu Food delivery service</h2>
+                <a href="order/">
+                    <button class="button">Order Now</button>
+                </a>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
+</body>
+
+</html>

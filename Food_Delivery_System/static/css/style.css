@@ -1,0 +1,126 @@
+.form-container {
+    width: device-width;
+    background-color: cream;
+    padding: 20px;
+}
+input{
+    width: 70%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+button{
+    background-color: #f00;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-right: 70px;
+    width: 100px;
+}
+nav .logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+nav {
+  display: flex;
+  align-items: center;
+}
+nav li {
+  margin-right: 20px;
+}
+nav a {
+  color: #f00;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+header {
+    background-color: white;
+    color: #f00;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 40px;
+}
+label {
+    font-weight: bold;
+    font-size: 18px;
+}
+img {
+    border-radius: 14px;
+}
+@media screen and (min-device-width: 768px) {
+
+    nav {
+      display: flex;
+      align-items: center;
+    }
+    header {
+        background-color: white;
+        color: #f00;
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 20px;
+    }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+        nav li {
+      margin-right: 30px;
+    }
+
+    nav a {
+      color: #f00;
+      text-decoration: none;
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+
+    nav a:hover {
+      background-color: #f00;
+      color: #fff;
+    }
+    button{
+        background-color: #f00;
+        color: #fff;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 10px;
+        margin-right: 70px;
+
+        width: 100px;
+    }
+
+    .button:hover {
+      background-color: #fff;
+      color: green;
+      border: none;
+    }
+    .form-container {
+        width: 400px;
+        margin: 50px auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 13px;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    }
+     body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f0f0f0;
+    }
+}

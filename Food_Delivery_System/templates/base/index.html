@@ -1,0 +1,102 @@
+{% block content %}
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        footer{
+            background-color: darkred;
+            color: #fff;
+            text-align: center;
+            padding: 5px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            height: 40px;
+        }
+        .container {
+            width: 300px;
+            margin: 30px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 13px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        @media only screen and (min-width: 768px) {
+            nav li {
+              margin-right: 30px;
+            }
+            .container {
+                margin-top: 30ps
+            }
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        button{
+            background-color: #f00;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            width: 100%;
+        }
+
+        .button:hover {
+          background-color: #fff;
+          color: #f00;
+          border: 1px solid #f00;
+        }
+        nav li {
+          margin-right: 30px;
+        }
+
+        nav a {
+          color: #f00;
+          text-decoration: none;
+          padding: 5px 10px;
+          border-radius: 5px;
+        }
+
+        nav a:hover {
+          background-color: #f00;
+          color: #fff;
+        }
+        nav .logo {
+          font-size: 24px;
+          font-weight: bold;
+        }
+        nav {
+          display: flex;
+          align-items: center;
+        }
+        header {
+            background-color: white;
+            color: #f00;
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 20px;
+        }
+        nav ul {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+          display: flex;
+        }
+    </style>
+</head>
+<body>
+
+</body>
+{% endblock content %}
+{% include 'base/footer.html' %}
